@@ -1,0 +1,117 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 100px;
+  background: linear-gradient(to right, rgba(33, 150, 243, 0.8), rgba(79, 194, 218, 0.8)); 
+  margin: 0;
+  height: 100%;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.5;
+}
+
+.card:hover .card-text, .card:hover .card-title, a {
+  color: rgb(0, 0, 0);
+  opacity: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.heading {
+  font-family: "Fugaz One";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 3rem;
+}
+
+.navbar {
+  background-color: white;
+  height: 70px;
+  margin: 20px;
+  border-radius: 16px;
+  padding: 0.5rem;
+  align-content: center;
+}
+
+.navbar.fixed-bottom .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.navbar.fixed-bottom {
+  margin: 0px;
+  border-radius: 10px;
+}
+
+#iconnav {
+  height: 80px;
+  max-height: 100%;
+  width: 80px;
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+}
+.navbar-toggler:focus, .btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.nav-link {
+  color: #666777;
+  font-weight: 500;
+  position: relative;
+  font-size: 19px;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #666777;
+  font-size: 24px;
+  transition: 0.3s color;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #000;
+}
+
+@media (min-width: 991px) {
+  .nav-link::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #41aeed;
+      visibility: hidden;
+      transition: 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::before, .nav-link.active::before {
+      width: 70%;
+      visibility: visible;
+  }
+}
+
+.inicial{
+  padding-top: 100px;
+}
+
+

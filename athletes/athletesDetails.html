@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>ITW 2024/25 - Projeto Final</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="athletesDetails.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand me-auto" href="#">Paris 2024</a>
+        <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h3>Jogos Olimpicos Paris 2024</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+            </div>
+            <div class="offcanvas-body ">
+                <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-2 "  href="../index/index.html">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link mx-lg-2 " href="../countries/wrldmap.html" id="paises">
+                            Países
+                        </a>
+                       
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link mx-lg-2 dropdown-toggle" id="modalidadesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Modalidades
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="modalidadesDropdown">
+                            <li><a class="dropdown-item" href="../sports/sports.html">Desportos</a></li>
+                            <li><a class="dropdown-item" href="../competitions/competitions.html">Competições</a></li>
+                            <li><a class="dropdown-item "  href="../basket/basket.html">Basquetebol</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link mx-lg-2 dropdown-toggle" href="#" id="peopleDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Participantes
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="peopleDropdown">
+                            <li><a class="dropdown-item active" aria-current="page" href="../athletes/athletes.html">Atletas</a></li>
+                            <li><a class="dropdown-item "  href="../coaches/coaches.html">Treinadores</a></li>
+                            <li><a class="dropdown-item" href="../officials/technical_officials.html">Oficiais</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link mx-lg-2 " href="../torch/tocha.html" id="torch">
+                            Tocha Olímpica
+                        </a>
+                       
+                    </li>
+                </ul>
+                <ul class="navbar-nav justify-content-end" id="bd-theme">
+                    <li class="nav-item"><div class="nav-link" type="button" data-bs-theme-value="light" aria-pressed="false"><i class="theme-icon fa fa-sun-o" title="Modo claro"></i></div></li>
+                    <li class="navbar-text hstack"><div class="vr"></div></li>
+                    <li class="nav-item"><div class="nav-link" type="button" data-bs-theme-value="dark" aria-pressed="false"><i class="theme-icon fa fa-moon-o" title="Modo escuro"></i></div></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+  <div class="container infoPrincipal">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <img class="profile-img" data-bind="attr: {src: photo, alt: 'photo of ' + name}" />
+        <h5 data-bind="text: name" class="mt-3"></h5>
+        <p>
+          <a data-bind="attr: { href: '../countries/countryDetails.html?id=' + nationalityCode() }">
+            <img class="flag-img" data-bind="attr: {src: flagUrl, alt: 'flag of ' + country}" />
+          <span data-bind="text: country"></span>
+          </a>
+          
+        </p>
+      </div>
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header bg-secondary text-white">Athlete Information</div>
+          <div class="card-body">
+            <div class="info-group row" data-bind="foreach: [
+              { label: 'Id', value: athleteId },
+              { label: 'Short Name', value: shortName },
+              { label: 'Sex', value: sex },
+              { label: 'Birth Date', value: formattedBirthDate() },
+              { label: 'Birth Place', value: birth },
+              { label: 'Function', value: athleteFunction }
+            ]">
+              <div class="col-4">
+                <strong data-bind="text: label + ': '"></strong>
+                <br />
+                <span data-bind="text: value"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header bg-success text-white">Achievements</div>
+          <div class="card-body">
+            <div data-bind="foreach: medals">
+              <span class="badge bg-warning text-dark mb-2">
+                <i class="fa fa-trophy"></i>
+                <span data-bind="text: Medal_Type"></span><br />
+                <span data-bind="text: Sport_Id"></span><br />
+                <span data-bind="text: Sport_name"></span><br />
+                <span data-bind="text: Competition_name"></span><br />
+                <span data-bind="text: Team_name"></span><br />
+              </span><br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            See more about this Athlete...
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body" data-bind="foreach: athletesDetails">
+            <div data-bind="if: value">
+              <strong data-bind="text: label + ':'"></strong>
+              <span data-bind="text: value"></span>
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <div class="mt-4">
+      <h5>Competitions</h5>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Sport ID</th>
+            <th>Name</th>
+            <th>Tag</th>
+          </tr>
+        </thead>
+        <tbody data-bind="foreach: competitions">
+          <tr>
+            <td data-bind="text: SportId"></td>
+            <td data-bind="text: Name"></td>
+            <td data-bind="text: Tag"></td>
+            <td><a
+              data-bind="attr: { href: '../competitions/competitionsDetails.html?sportid=' + $data.SportId + '&name=' + $data.Name }"
+            ><i class="fa fa-external-link" aria-hidden="true"></i>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Loading Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Loading data...</h5>
+        </div>
+        <div class="modal-body text-center">
+          <i class="fa fa-spin fa-3x fa-refresh"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar fixed-bottom bg-body-tertiary border-top ">
+    <div class="container-fluid">
+        <div class="navbar-text">&copy;  Introdução as Tecnologias Web - 2024/25</div>
+        <div class="navbar-nav">
+            <div class="nav-item text-end"><a href="https://www.ua.pt" class="nav-link">Universidade de Aveiro</a></div>
+        </div>
+    </div>
+</nav>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+  <script src="athletesDetails.js"></script>
+</body>
+</html>

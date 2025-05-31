@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desporto Favorito</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <link href="modfav.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand me-auto" href="#">Paris 2024</a>
+            <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h3>Jogos Olimpicos Paris 2024</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+                </div>
+                <div class="offcanvas-body ">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link mx-lg-2 dropdown-toggle" href="#" id="paisesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Países
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="paisesDropdown">
+                                <li><a class="dropdown-item" href="#">País 1</a></li>
+                                <li><a class="dropdown-item" href="#">País 2</a></li>
+                                <li><a class="dropdown-item" href="#">País 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link mx-lg-2 dropdown-toggle" href="#" id="modalidadesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Modalidades
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="modalidadesDropdown">
+                                <li><a class="dropdown-item" href="#">Modalidade 1</a></li>
+                                <li><a class="dropdown-item" href="#">Modalidade 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#">Atletas</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav justify-content-end" id="bd-theme">
+                        <li class="nav-item"><div class="nav-link" type="button" data-bs-theme-value="light" aria-pressed="false"><i class="theme-icon fa fa-sun-o" title="Modo claro"></i></div></li>
+                        <li class="navbar-text hstack"><div class="vr"></div></li>
+                        <li class="nav-item"><div class="nav-link" type="button" data-bs-theme-value="dark" aria-pressed="false"><i class="theme-icon fa fa-moon-o" title="Modo escuro"></i></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+    <script src="modfav.js"></script>
+</body>
+</html>

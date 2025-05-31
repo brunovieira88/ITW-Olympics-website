@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>ITW 2024/25 - Projeto Final</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap"
+    />
+    <!--Remote links-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+    <link href="sportsDetails.css" rel="stylesheet" />
+  </head>
+  <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+          <div class="container-fluid">
+              <a class="navbar-brand me-auto" href="#">Paris 2024</a>
+              <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                  <div class="offcanvas-header">
+                      <h3>Jogos Olimpicos Paris 2024</h3>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    
+                  </div>
+                  <div class="offcanvas-body ">
+                      <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                          <li class="nav-item">
+                              <a class="nav-link mx-lg-2 "  href="../index/index.html">Home</a>
+                          </li>
+                          <li class="nav-item ">
+                              <a class="nav-link mx-lg-2 " href="../countries/wrldmap.html" id="paises">
+                                  Países
+                              </a>
+                             
+                          </li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link mx-lg-2 dropdown-toggle" id="modalidadesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Modalidades
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="modalidadesDropdown">
+                                  <li><a class="dropdown-item active" aria-current="page" href="../sports/sports.html">Desportos</a></li>
+                                  <li><a class="dropdown-item" href="../competitions/competitions.html">Competições</a></li>
+                                  <li><a class="dropdown-item" href="../basket/basket.html">Basquetebol</a></li>
+                              </ul>
+                          </li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link mx-lg-2 dropdown-toggle"  id="peopleDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Participantes
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="peopleDropdown">
+                                  <li><a class="dropdown-item" href="../athletes/athletes.html">Atletas</a></li>
+                                  <li><a class="dropdown-item" href="../coaches/coaches.html">Treinadores</a></li>
+                                  <li><a class="dropdown-item" href="../officials/technical_officials.html">Oficiais</a></li>
+                              </ul>
+                          </li>
+                          <li class="nav-item ">
+                              <a class="nav-link mx-lg-2 " href="../torch/tocha.html" id="torch">
+                                  Tocha Olímpica
+                              </a>
+                             
+                          </li>
+                      </ul>
+                      <ul class="navbar-nav justify-content-end" id="bd-theme">
+                          <li class="nav-item"><div class="nav-link" type="button" data-bs-theme-value="light" aria-pressed="false"><i class="theme-icon fa fa-sun-o" title="Modo claro"></i></div></li>
+                          <li class="navbar-text hstack"><div class="vr"></div></li>
+                          <li class="nav-item"><div class="nav-link" type="button" data-bs-theme-value="dark" aria-pressed="false"><i class="theme-icon fa fa-moon-o" title="Modo escuro"></i></div></li>
+                      </ul>
+                  </div>
+              </div>
+    
+          </div>
+      </nav>
+    <!-- Content Container -->
+    <div class="container inicial">
+      <!-- Basic Information -->
+      <div class="mb-4">
+        <h2><i class="fa fa-info-circle"></i> <span class="heading">Basic Information</span></h2>
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <img
+              data-bind="attr: {src: pictogram, alt: 'pictogram of ' + name, title: 'pictogram of ' + name}"
+              class="rounded"
+            />
+          </div>
+          <div class="col-md-8">
+            <p><strong>Id:</strong> <span data-bind="text: id"></span></p>
+            <p>
+              <strong>Name:</strong> <span data-bind="text: name"></span>
+            </p>
+            <p>
+              <strong>Sport URL:</strong>
+              <a
+                data-bind="attr: {href: sport_url}"
+                target="_blank"
+                class="btn btn-link"
+                ><i class="fa fa-external-link"></i> Visit Sport Page</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Sections Accordion -->
+      <div class="accordion" id="sportsAccordion">
+        <!-- Athletes Section -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingAthletes">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseAthletes"
+              aria-expanded="true"
+              aria-controls="collapseAthletes"
+            >
+              <i class="fa fa-users"></i> Athletes
+            </button>
+          </h2>
+          <div
+            id="collapseAthletes"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingAthletes"
+            data-bs-parent="#sportsAccordion"
+          >
+            <div class="accordion-body">
+              <div class="row" data-bind="foreach: athletes">
+                <!-- Card for each athlete -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                  <a data-bind="attr: {href: '../athletes/athletesDetails.html?id=' + Id}">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <h5 class="card-title"><i class="fa fa-user"></i> <span data-bind="text: Name"></span></h5>
+                        <p class="card-text"><strong>Id:</strong> <span data-bind="text: Id"></span></p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Coaches Section -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingCoaches">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseCoaches"
+              aria-expanded="false"
+              aria-controls="collapseCoaches"
+            >
+              <i class="fa fa-user-tie"></i> Coaches
+            </button>
+          </h2>
+          <div
+            id="collapseCoaches"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingCoaches"
+            data-bs-parent="#sportsAccordion"
+          >
+            <div class="accordion-body">
+              <div class="row" data-bind="foreach: coaches">
+                <!-- Card for each coach -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                  <a data-bind="attr: {href: '../coaches/coachesDetails.html?id=' + Id}">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <h5 class="card-title"><i class="fa fa-user-tie"></i> <span data-bind="text: Name"></span></h5>
+                        <p class="card-text"><strong>Id:</strong> <span data-bind="text: Id"></span></p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Competitions Section -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingCompetitions">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseCompetitions"
+              aria-expanded="false"
+              aria-controls="collapseCompetitions"
+            >
+              <i class="fa fa-flag-checkered"></i> Competitions
+            </button>
+          </h2>
+          <div
+            id="collapseCompetitions"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingCompetitions"
+            data-bs-parent="#sportsAccordion"
+          >
+          <div class="accordion-body">
+            <div class="row" data-bind="foreach: competitions">
+              <div class="col-12 mb-3">
+                <a
+                    data-bind="attr: { href: '../competitions/competitionsDetails.html?sportid=' + SportId + '&name=' + Name }"
+                >
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title"><i class="fa fa-flag-checkered"></i> <span data-bind="text: Name"></span></h5>
+                      <p class="card-text">
+                        <strong>SportId:</strong> <span data-bind="text: SportId"></span>
+                      </p>
+                      <p class="card-text">
+                        <i class="fa fa-tag"></i> <span data-bind="text: Tag"></span>
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          </div>
+        </div>
+    
+        <!-- Venues Section -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingVenues">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseVenues"
+              aria-expanded="false"
+              aria-controls="collapseVenues"
+            >
+              <i class="fa fa-map-marker"></i> Venues
+            </button>
+          </h2>
+          <div
+            id="collapseVenues"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingVenues"
+            data-bs-parent="#sportsAccordion"
+          >
+            <div class="accordion-body">
+              <ul class="list-group" data-bind="foreach: venues">
+                <li class="list-group-item">
+                  <strong>Id:</strong> <span data-bind="text: Id"></span>
+                  <span>
+                    <i class="fa fa-building"></i>
+                    <span data-bind="text: Name"></span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="myModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+                Loading data...
+            </h5>
+          </div>
+          <div class="modal-body text-center">
+            <i class="fa fa-spin fa-3x fa-refresh"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar fixed-bottom bg-body-tertiary border-top ">
+      <div class="container-fluid">
+          <div class="navbar-text">&copy;  Introdução as Tecnologias Web - 2024/25</div>
+          <div class="navbar-nav">
+              <div class="nav-item text-end"><a href="https://www.ua.pt" class="nav-link">Universidade de Aveiro</a></div>
+          </div>
+      </div>
+    </nav>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="sportsDetails.js"></script>
+  </body>
+</html>
+

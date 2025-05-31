@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>ITW 2024/25 - Projeto final</title>
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+    <link href="technical_officialsDetails.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+          <a class="navbar-brand me-auto" href="#">Paris 2024</a>
+          <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                  <h3>Jogos Olimpicos Paris 2024</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+              </div>
+              <div class="offcanvas-body ">
+                  <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                      <li class="nav-item">
+                          <a class="nav-link mx-lg-2 "  href="../index/index.html">Home</a>
+                      </li>
+                      <li class="nav-item ">
+                          <a class="nav-link mx-lg-2 " href="../countries/wrldmap.html" id="paises">
+                              Países
+                          </a>
+                         
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link mx-lg-2 dropdown-toggle" id="modalidadesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Modalidades
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="modalidadesDropdown">
+                              <li><a class="dropdown-item" href="../sports/sports.html">Desportos</a></li>
+                              <li><a class="dropdown-item" href="../competitions/competitions.html">Competições</a></li>
+                              <li><a class="dropdown-item" href="../basket/basket.html">Basquetebol</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link mx-lg-2 dropdown-toggle" href="#" id="peopleDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Participantes
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="peopleDropdown">
+                              <li><a class="dropdown-item" href="../athletes/athletes.html">Atletas</a></li>
+                              <li><a class="dropdown-item" href="../coaches/coaches.html">Treinadores</a></li>
+                              <li><a class="dropdown-item active" aria-current="page" href="../officials/technical_officials.html">Oficiais</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item ">
+                          <a class="nav-link mx-lg-2 " href="../torch/tocha.html" id="torch">
+                              Tocha Olímpica
+                          </a>
+                         
+                      </li>
+                  </ul>
+                  <ul class="navbar-nav justify-content-end" id="bd-theme">
+                      <li class="nav-item"><div class="nav-link" type="button" data-bs-theme-value="light" aria-pressed="false"><i class="theme-icon fa fa-sun-o" title="Modo claro"></i></div></li>
+                      <li class="navbar-text hstack"><div class="vr"></div></li>
+                      <li class="nav-item"><div class="nav-link" type="button" data-bs-theme-value="dark" aria-pressed="false"><i class="theme-icon fa fa-moon-o" title="Modo escuro"></i></div></li>
+                  </ul>
+              </div>
+          </div>
+
+      </div>
+  </nav>
+
+    <div class="container inicial">
+      <div class="card">
+        <div class="card-header heading">
+          Technical Official Details
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img
+                class="img-thumbnail"
+                data-bind="attr: {src: photo, alt: 'photo of ' + name, title: name}"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="info-item">
+                <strong>Id:</strong> <span data-bind="text: officialId"></span>
+              </div>
+              <div class="info-item">
+                <strong>Name:</strong> <span data-bind="text: name"></span>
+              </div>
+              <div class="info-item">
+                <strong>Sex:</strong> <span data-bind="text: sex"></span>
+              </div>
+              <div data-bind="if: birthDate" class="info-item">
+                <strong>Birth Date:</strong> <span data-bind="text: birthDate"></span>
+              </div>
+              <div class="info-item">
+                <strong>Function:</strong> <span data-bind="text: officialFunction"></span>
+              </div>
+              <div class="info-item">
+                <strong>Category:</strong> <span data-bind="text: category"></span>
+              </div>
+              <div class="info-item">
+                <strong>Organisation Code:</strong> <span data-bind="text: organizationCode"></span>
+              </div>
+              <div class="info-item">
+                <strong>Organization:</strong> <span data-bind="text: organization"></span>
+              </div>
+              <div class="info-item">
+                <strong>Organization Long:</strong> <span data-bind="text: organizationLong"></span>
+              </div>
+              <div data-bind="if: moreInfo" class="info-item">
+                <strong>More Info:</strong> <span data-bind="text: moreInfo"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-bind="if: sports">
+        <div data-bind="foreach: sports">
+          <a
+                  class="btn btn-primary"
+                  data-bind="attr: { href: '/101%20Project/sportsDetails.html?id=' + Id }"
+          >
+            <div class="card">
+              <div class="card-header">
+                Sport Details
+              </div>
+              <div class="card-body">
+                <div class="info-item">
+                  <strong>Id:</strong> <span data-bind="text: Id"></span>
+                </div>
+                <div class="info-item">
+                  <strong>Name:</strong> <span data-bind="text: Name"></span>
+                </div>
+                <div class="info-item">
+                  <strong>Sport URL:</strong> <span data-bind="text: Sport_url"></span>
+                </div>
+                <div class="info-item">
+                  <strong>Pictogram:</strong> <span data-bind="text: Pictogram"></span>
+                </div>
+                <div class="info-item">
+                  <strong>Athletes:</strong> <span data-bind="text: Athletes"></span>
+                </div>
+                <div class="info-item">
+                  <strong>Coaches:</strong> <span data-bind="text: Coaches"></span>
+                </div>
+                <div class="info-item">
+                  <strong>Competitions:</strong> <span data-bind="text: Competitions"></span>
+                </div>
+                <div class="info-item">
+                  <strong>Teams:</strong> <span data-bind="text: Teams"></span>
+                </div>
+                <div class="info-item">
+                  <strong>Technical Officials:</strong> <span data-bind="text: Technical_officials"></span>
+                </div>
+                <div class="info-item">
+                  <strong>Venues:</strong> <span data-bind="text: Venues"></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="myModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="myModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Loading data...
+              </h5>
+            </div>
+            <div class="modal-body text-center">
+              <i class="fa fa-spin fa-3x fa-refresh"></i>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar fixed-bottom bg-body-tertiary border-top ">
+      <div class="container-fluid">
+          <div class="navbar-text">&copy;  Introdução as Tecnologias Web - 2024/25</div>
+          <div class="navbar-nav">
+              <div class="nav-item text-end"><a href="https://www.ua.pt" class="nav-link">Universidade de Aveiro</a></div>
+          </div>
+      </div>
+    </nav>
+    <!-- JS Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="technical_officialsDetails.js"></script>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 100px;
+    background: linear-gradient(to right, rgba(33, 150, 243, 0.8), rgba(79, 194, 218, 0.8)); 
+    margin: 0;
+    height: 100%;
+  }
+    
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;;
+  }
+
+  .card-header {
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .card-body {
+    font-size: 1.1em;
+    line-height: 1.5;
+  }
+
+  .img-thumbnail {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .modal-content {
+    border-radius: 10px;
+  }
+
+  .modal-header {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2em;
+  }
+
+  .modal-body {
+    font-size: 1.2em;
+  }
+
+  .modal-footer button {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+
+  .modal-footer button:hover {
+    background-color: #0056b3;
+  }
+
+  .section-title {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+
+  .info-item {
+    margin-bottom: 12px;
+  }
+
+  .info-item strong {
+    color: #007bff;
+  }
+
+  .info-item span {
+    font-size: 1.1em;
+    color: #555;
+  }
+  .heading {
+    font-family: "Fugaz One";
+    font-weight: 300;
+    font-style: normal;
+    font-size: 3rem;
+  }
+  
+  .navbar {
+    background-color: white;
+    height: 70px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+    align-content: center;
+  }
+  
+  .navbar.fixed-bottom .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .navbar.fixed-bottom {
+    margin: 0px;
+    border-radius: 10px;
+  }
+  
+  #iconnav {
+    height: 80px;
+    max-height: 100%;
+    width: 80px;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+  }
+  .navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .nav-link {
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+    font-size: 19px;
+  }
+  
+  .navbar-brand {
+    font-weight: 700;
+    color: #666777;
+    font-size: 24px;
+    transition: 0.3s color;
+  }
+  
+  .nav-link:hover, .nav-link.active {
+    color: #000;
+  }
+  
+  @media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #41aeed;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+  
+    .nav-link:hover::before, .nav-link.active::before {
+        width: 70%;
+        visibility: visible;
+    }
+  }
+  
+  .inicial{
+    padding-top: 100px;
+  }
+  
+  
+  
